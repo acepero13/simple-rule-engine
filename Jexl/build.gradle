@@ -1,0 +1,28 @@
+plugins {
+    id 'java'
+}
+
+group 'com.acepero13.research.ruleengine'
+version '1.0.0'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation project(':SimpleRuleEngine')
+    // https://mvnrepository.com/artifact/org.apache.commons/commons-jexl
+    implementation group: 'org.apache.commons', name: 'commons-jexl3', version: '3.1'
+
+    testImplementation platform('org.junit:junit-bom:5.9.1')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+
+    implementation 'org.apache.logging.log4j:log4j-api:2.19.0'
+    implementation 'org.apache.logging.log4j:log4j-core:2.19.0'
+    implementation group: 'com.fasterxml.jackson.dataformat', name: 'jackson-dataformat-yaml', version: '2.14.2'
+
+}
+
+test {
+    useJUnitPlatform()
+}
