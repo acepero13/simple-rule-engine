@@ -1,4 +1,19 @@
 rootProject.name = 'simple-rule-engine'
-include 'SimpleRuleEngine'
-include 'Jexl'
+include 'simple-rule-engine-core'
+include 'jexl-rules'
+
+dependencyResolutionManagement {
+    versionCatalogs {
+        libs {
+            version('junit', '5.9.1')
+            version('log4j', '2.19.0')
+            version('lombok', '1.18.24')
+            library('junit-jupiter', 'org.junit.jupiter', 'junit-jupiter').version('junit')
+            library('junit', 'org.junit', 'junit-bom').versionRef('junit')
+            library('log4j2-core', 'org.apache.logging.log4j', 'log4j-core').version('log4j')
+            library('log4j2-api', 'org.apache.logging.log4j', 'log4j-api').version('log4j')
+            library('lombok', 'org.projectlombok', 'lombok').version('lombok')
+        }
+    }
+}
 
