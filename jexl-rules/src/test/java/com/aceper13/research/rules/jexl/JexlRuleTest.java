@@ -15,8 +15,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class JexlRuleTest {
 
-    private Facts facts = new InMemoryFacts();
-    ;
+    private final Facts facts = new InMemoryFacts();
+
 
 
     @Test

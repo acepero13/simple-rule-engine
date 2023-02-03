@@ -32,9 +32,9 @@ public class JexlCondition implements Condition {
         try {
             return (boolean) expr.evaluate(jc);
         } catch (JexlException e) {
-            logger.error("Error evaluating expression: {}. Check that the expression matches the fact, and the fact base contains the variable. Error: {}", expr.toString(), e.getMessage());
+            logger.error("Error evaluating expression: {}. Check that the expression matches the fact, and the fact base contains the variable. Error: {}", expr, e.getMessage());
         } catch (ClassCastException e) {
-            logger.error("Error evaluating expression: {}. Check that the expression evaluates to true or false. Error: {}", expr.toString(), e.getMessage());
+            logger.error("Error evaluating expression: {}. Check that the expression evaluates to true or false. Error: {}", expr, e.getMessage());
         }
         return false;
     }

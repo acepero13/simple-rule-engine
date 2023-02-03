@@ -1,11 +1,8 @@
 package com.aceper13.research.rules.jexl;
 
-import com.acepero13.research.ruleengine.api.Action;
 import com.acepero13.research.ruleengine.api.Facts;
 import com.acepero13.research.ruleengine.model.InMemoryFacts;
 import org.junit.jupiter.api.Test;
-
-import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 

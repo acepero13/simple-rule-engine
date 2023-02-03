@@ -17,7 +17,7 @@ class JexlActionTest {
     private final Facts facts = new InMemoryFacts();
 
     @Test
-    void executes() throws Exception {
+    void executes() {
         Person person = new Person();
         facts.put("person", person);
         var action = new JexlAction("person.setAdult(true)");
@@ -26,7 +26,7 @@ class JexlActionTest {
     }
 
     @Test
-    void executesCustomFunction() throws Exception {
+    void executesCustomFunction() {
         PrintStream originalStream = System.out;
         ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
         System.setOut(new PrintStream(outputStream));
@@ -46,7 +46,7 @@ class JexlActionTest {
     }
 
     @Test
-    void addsResultToFacts() throws Exception {
+    void addsResultToFacts() {
 
 
         var action = new JexlAction("facts.put('value', true)");
